@@ -12,6 +12,7 @@
 [core]
   pager = less -FRSX
 	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	excludesfile = /Users/aseemkthakur/.gitignore_global
 
 [alias]
   co = checkout
@@ -51,4 +52,12 @@
   rebase = false
 [user]
 	email = aseemkthakur@gmail.com
-	name = Aseem Kumar Thakur
+	name = Aseem Thakur
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/aseemkthakur/.stCommitMsg
